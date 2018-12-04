@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }).addstudent(id.getText().toString(),name.getText().toString());
+                 id.setText("");
+                name.setText("");
 
 
             }
