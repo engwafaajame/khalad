@@ -25,7 +25,7 @@ public class VolleyRequests<T> extends Observable {
 
 
 
-    public void addstudent(final String id,final  String name) {
+    public void addstudent(final String student_id,final  String student_name) {
         StringRequest jsonObjectRequest = new StringRequest(Request.Method.POST,
                 "http://wasfat.club/api/add_student.php",  new Response.Listener<String>() {
             @Override
@@ -57,8 +57,8 @@ public class VolleyRequests<T> extends Observable {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> map = new HashMap();
-                map.put("id",id);
-                map.put("name",name);
+                map.put("student_id",student_id);
+                map.put("student_name",student_name);
                 return map;
             }
         };
