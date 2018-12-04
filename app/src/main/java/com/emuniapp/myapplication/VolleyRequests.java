@@ -32,7 +32,7 @@ public class VolleyRequests<T> extends Observable {
             public void onResponse(String response) {
                 GsonBuilder gsonBuilder = new GsonBuilder();
                 Gson gson = gsonBuilder.create();
-                JsonResult jsonResult = gson.fromJson(response.toString(), JsonResult.class);
+                State jsonResult = gson.fromJson(response.toString(), State.class);
 
                 setChanged();
                 notifyObservers(jsonResult);
@@ -45,6 +45,7 @@ public class VolleyRequests<T> extends Observable {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
 
             }
         })
