@@ -30,15 +30,18 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDataReceived(Object posts) {
 
-                        if ((((JsonResult) posts).getResult()).matches("true")) {
-                            Toast.makeText(MainActivity.this, "" + ((JsonResult) posts).getResult(), Toast.LENGTH_LONG).show();
+                      // if ((((State) posts).getState())) {
+                            Toast.makeText(MainActivity.this, "" + ((State) posts).getDbId()
+                                    , Toast.LENGTH_LONG).show();
 
-                        }
+                       // }
 
                     }
                 }).addstudent(id.getText().toString(),name.getText().toString());
-                 id.setText("");
+               // Toast.makeText(MainActivity.this, ""+((State) posts).getState(), Toast.LENGTH_SHORT).show();
+                id.setText("");
                 name.setText("");
+
 
 
             }
